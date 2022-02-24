@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    color: brown;
+}
+
+.aboutblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0.603);
+    border: 1px solid white;
+    border-radius: 5px;
+}
