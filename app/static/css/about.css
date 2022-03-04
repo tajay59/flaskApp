@@ -22,7 +22,12 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   background-color: rgba(0, 255, 255, 0.603);
-  border: 1px solid white;
-  border-radius: 5px;
+  border: 5px solid white;
+  border-radius: 15px;
+}
+
+img {
+  max-width: 300px;
+  height: auto;
 }
 /*# sourceMappingURL=about.css.map */

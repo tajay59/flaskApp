@@ -31,6 +31,12 @@ def about():
     return render_template('about.html', name="Mary Jane")
 
 
+@app.route('/dashboard')
+def dashboard():
+    """Render the website's about page."""
+    return render_template('dashboard.html')
+
+
 @app.route('/contact',methods=['POST','GET'])
 def contact():
     form = ContactForm()

@@ -1,0 +1,63 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  /*border: 2px solid #f76707;*/
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper .two {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: white;
+}
+
+.mqttnotification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mqttnotification #messages {
+  /*border: 2px solid #6e4dff;*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mqttnotification #status {
+  /*order: 2px solid #ffa94d;*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* HIGHCHARTS STYLE */
+/*# sourceMappingURL=dashboard.css.map */

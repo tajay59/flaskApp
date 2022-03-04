@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block css_js %}
+
+<script src="https://code.highcharts.com/9.3.3/highcharts.js"></script> 
+<script src="https://code.highcharts.com/9.3.3/modules/data.js"></script>
+<script src="https://code.highcharts.com/9.3.3/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/9.3.3/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/9.3.3/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/9.3.3/modules/accessibility.js"></script> 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/darkUnica.css') }}"> 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">  
+
+<script src="{{ url_for('static', filename='js/mqttws31.js') }}"></script>
+<script src="{{ url_for('static', filename='js/mqtt.js') }}"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock%} 
+
+
+{% block main %}
+<div   class="mqttnotification">
+    <span id = "messages"  >  </span>  
+     <span id = "status"   > </span>  
+     </div>
+<hr>
+<div class="wrapper">
+    <div class="one">1</div>
+    <div class="two">
+        <figure class="highcharts-figure">
+            <div id="container"></div> 
+          </figure>
+    </div>
+    <div class="three">3</div>
+    <div class="four">4</div>
+    <div class="five">5</div>
+    <div class="six">6</div>
+    <div class="seven">7</div>
+    <div class="eight">8</div>
+    <div class="nine">9</div>
+
+</div>
+
+{% endblock %}
+
+{% block js %} 
+<script>
+var connected_flag=0	
+var mqtt;
+var reconnectTimeout = 2000;
+var host = "176.58.103.182"; // "176.58.103.182"      "45.33.122.253"
+var port = 9001;
+</script>
+
+{% endblock%}
+ 
+ 
