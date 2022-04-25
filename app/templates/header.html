@@ -19,34 +19,54 @@
         <li class="dashboard"><a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a></li>
         <li class="navbar-dropdown categories">
           <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
-            Categories <svg width="24px" height="24px" viewBox="0 0 24 24"> <rect  x="0" fill="none" width="24" height="24"/><g><path  d="M7 10l5 5 5-5"/></g></svg>
+            Analysis <svg width="24px" height="24px" viewBox="0 0 24 24"> <rect  x="0" fill="none" width="24" height="24"/><g><path  d="M7 10l5 5 5-5"/></g></svg>
           </a>
           <ul class="dropdown" id="my-dropdown-id">
-            <li><a href="#">Actions</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Live</a></li>
+            <li><a href="#">Archive</a></li>
             <li class="separator"></li>
-            <li><a href="#">Seprated link</a></li>
+            <li><a href="#">Report</a></li>
             <li class="separator"></li>
-            <li><a href="#">One more seprated link.</a></li>
+            <li><a href="#">Download</a></li>
           </ul>
         </li>
+
+        <li class="control"><a   href="{{ url_for('control') }}">Monitor</a></li>
+        
+        
+      </ul>
+      
+      <ul class="navbar-nav">
+
         <li class="navbar-dropdown blog">
           <a href="#" class="dropdown-toggler" data-dropdown="blog">
-            Blog <svg width="24px" height="24px" viewBox="0 0 24 24"> <rect  x="0" fill="none" width="24" height="24"/><g><path  d="M7 10l5 5 5-5"/></g></svg>
+            Account <svg width="24px" height="24px" viewBox="0 0 24 24"> <rect  x="0" fill="none" width="24" height="24"/><g><path  d="M7 10l5 5 5-5"/></g></svg>
           </a>
           <ul class="dropdown" id="blog">
-            <li><a href="#">Some category</a></li>
-            <li><a href="#">Some another category</a></li>
+            <li><a href="{{ url_for('signup') }}">Signup</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
             <li class="separator"></li>
-            <li><a href="#">Seprated link</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
             <li class="separator"></li>
             <li><a href="#">One more seprated link.</a></li>
           </ul>
-        </li>
-        <li class="about"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
-        <li class="contact"><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
-        <li><a href="#">Signin</a></li>
-      </ul>
+        </li> 
+
+
+
+
+        {% if not current_user.is_authenticated %}
+            <li class="nav-item loginouticon">
+              <img id="loginimg" src="{{url_for('static',filename='images/login1.svg')}}" alt=""> 
+              <span>Login</span>
+            </li>
+        {% else %}
+            <li class="nav-item loginouticon">                                 
+                <img id="logoutimg" src="{{url_for('static',filename='images/logout.svg')}}" alt="">
+                <span>Logout</span>
+            </li>
+        {% endif %}
+    </ul>
     </div>
   </div>
 </nav>

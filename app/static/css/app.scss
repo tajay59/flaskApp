@@ -13,7 +13,7 @@ $border-color: #eceef3;
 
 $navbar-body-color: #fff;
 // $navbar-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.035);
-$navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$navbar-shadow: 0 1px 2px 0 rgba(27, 140, 201, 0.5);
 $navbar-padding-y: 1rem;
 $navbar-padding-x: 1.15rem;
 
@@ -47,7 +47,7 @@ a {
 }
 
 .container {
-  width: 1170px;
+  width: 90%;
   position: relative;
   margin: {
     left: auto;
@@ -58,6 +58,31 @@ a {
     right: 15px;
   }
 }
+
+.loginouticon{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  span{
+    font-size: 10px;
+    font-weight: bold;
+  }
+}
+
+img#logoutimg,img#loginimg{
+  width: 25px;
+  height: auto;
+  transition: all ease 100ms;
+  &:hover{
+    cursor: pointer;
+    width: 27px;
+    height: auto;
+  }
+}
+
+
 
 // Start navbar
 
@@ -257,44 +282,30 @@ a {
 
 /* NAV BAR END */
 
-button {
+button,button > a {
     width: 100px;
-    height: 40px;
+    height: 30px;
     border: 1px ;
+    font-size: 14px;
     border-radius: 5px;
-    background-color: rgb(25, 163, 228);
+    background-color: #19a3e4;
     color: azure;
+    transition: all ease 100ms;
+    &:active{
+      background-color: #45B6EB;
+      width: 80px;
+      height: 30px;
+  }
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 600px;
-    max-width: 350px;
-}
 
- 
-label {
-font-weight: bold; 
-}
 
-#labels{
-    font-weight: bold; 
-    color: black;
-    
-}
 
  
-
-label::after {
-    content: " (Required)";
-    color: rgb(218, 6, 6);
-}
 
 main { 
-  padding-top:50px;
-  padding-bottom: 50px;
+  padding-top:20px;
+  padding-bottom: 20px;
 }
 
 path {

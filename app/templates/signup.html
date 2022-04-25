@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block css_js %} 
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">  
+<script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+{% endblock%} 
+
+
+{% block main %}
+
+<h1>Signup</h1>
+<hr>
+
+<p> Fill in this form to create an account</p>
+<form method="post" action="{{ url_for('signup') }}">
+{{form.csrf_token}}
+
+<div>  
+    {{form.username.label}}     
+    {{form.username}}     
+</div>
+
+<div>  
+    {{form.email.label}}   
+    {{form.email}}    
+</div>
+ 
+
+<div>  
+    {{form.password.label}}   
+    {{form.password}}    
+</div>
+ 
+ 
+
+
+<button type="submit"> Send</button>
+</form>
+
+{% endblock %}
+
+ 

@@ -1,0 +1,160 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li.control > a {
+  font-weight: bold;
+  border-radius: 5px;
+  border-bottom: 5px solid lightblue;
+  color: #fff4e6;
+}
+
+.controlgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 4fr;
+      grid-template-columns: 2fr 1fr 4fr;
+  -ms-grid-rows: minmax(400px, 500px);
+      grid-template-rows: minmax(400px, 500px);
+  gap: 5px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.controlgrid div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: white;
+}
+
+.commands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.commands .sleepmode, .commands .stationmode, .commands .telemetry, .commands .version {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.mqttnotification {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mqttnotification #messages {
+  /*border: 2px solid #6e4dff;*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mqttnotification #status {
+  /*order: 2px solid #ffa94d;*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.replies {
+  overflow-y: scroll;
+}
+
+.replies ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.replies ul li {
+  list-style: none;
+  background-color: #7e7ee2;
+  border: 1px solid #b82727;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.replies ul li span {
+  font-size: 12px;
+  height: auto;
+  word-wrap: break-word;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 3px;
+  max-width: 120px;
+  padding: 10px;
+  border: 1px;
+  border-radius: 5px;
+  background-color: lightseagreen;
+}
+
+form select {
+  border: none;
+}
+
+form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form input {
+  width: inherit;
+}
+
+form input:active {
+  border: 1px;
+  border-color: aqua;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=control.css.map */

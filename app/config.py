@@ -14,3 +14,4 @@ class Config(object):
     MAIL_PORT       = os.environ.get('MAIL_PORT','465')
     MAIL_USERNAME   = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD   = os.environ.get('MAIL_PASSWORD') 
+    MONGO_URI       = os.environ.get('MONGO_URI') 

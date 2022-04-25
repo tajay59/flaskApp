@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 
 {% block css_js %}
+<!-- LEAFLET -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="   crossorigin=""></script>
 
+
+ <!-- HIGHCHARTS -->
 <script src="https://code.highcharts.com/9.3.3/highcharts.js"></script> 
 <script src="https://code.highcharts.com/9.3.3/modules/data.js"></script>
 <script src="https://code.highcharts.com/9.3.3/modules/drilldown.js"></script>
@@ -13,16 +19,18 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">  
 
 <script src="{{ url_for('static', filename='js/mqttws31.js') }}"></script>
-<script src="{{ url_for('static', filename='js/mqtt.js') }}"></script>
 <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
-{% endblock%} 
+{% endblock %} 
 
 
 {% block main %}
-<div   class="mqttnotification">
-    <span id = "messages"  >  </span>  
-     <span id = "status"   > </span>  
-     </div>
+
+
+<div   class="mqttnotification">  <span id = "messages"  >  </span>       <span id = "status"   > </span>   </div>
+<hr>
+<div class="mapcontainer">
+    <div id="map">map</div>
+</div>
 <hr>
 <div class="wrapper">
     <div class="one">1</div>

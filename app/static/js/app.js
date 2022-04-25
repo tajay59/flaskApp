@@ -2,7 +2,24 @@
 
 window.addEventListener('load', ()=>{
     
-let dropdowns = document.querySelectorAll('.navbar .dropdown-toggler')
+let dropdowns = document.querySelectorAll('.navbar .dropdown-toggler');
+let logout    = document.querySelector('#logoutimg');
+let login    = document.querySelector('#loginimg');
+
+
+if(logout !== null){
+  logout.addEventListener('click',()=>{
+    location.href = "/logout/";
+  });
+}
+
+if(login !== null){
+  login.addEventListener('click',()=>{
+    location.href = "/login/";
+  });
+}
+
+
 let dropdownIsOpen = false
 
 // Handle dropdown menues

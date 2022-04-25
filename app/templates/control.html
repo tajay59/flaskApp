@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block css_js %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/control.css')}}">
+<script src="{{ url_for('static', filename='js/mqttws31.js') }}"></script>
+<script src="{{url_for('static',filename='js/control.js')}}"></script>
+{% endblock %}
+
+{% block main %}
+<div class="topbar"> 
+    <div   class="mqttnotification">  <span id = "messages"  >  </span>       <span id = "status"   > </span>   </div>
+
+</div>
+
+<hr>
+<div class="controlgrid">
+    <div class="commands"> 
+        <form onsubmit="return false">
+            {{sleepmode.state.label}}
+            {{sleepmode.state(id="sleepmode_mode")}}
+            {{sleepmode.stations.label}}
+            {{sleepmode.stations(id="sleepmode_stations")}}
+            {{sleepmode.interval.label}}
+            {{sleepmode.interval(id="sleepmode_interval")}}
+            <button id="sleepmode_button">Publish</button>
+        </form>
+
+        <form onsubmit="return false">
+            {{stationmode.state.label}}
+            {{stationmode.state(id="stationmode_mode")}}
+            {{stationmode.stations.label}}
+            {{stationmode.stations(id="stationmode_stations")}} 
+            <button id="stationmode_button">Publish</button>
+        </form>
+
+        <form onsubmit="return false">
+            {{update.firmware.label}}
+            {{update.firmware(id="firmware_version")}}
+            {{update.stations.label}}
+            {{update.stations(id="firmware_stations")}} 
+            <button id="firmware_button">Publish</button>
+        </form>
+ 
+        <form onsubmit="return false">
+            {{form.stations.label}}
+            {{form.stations(id="telemetry_select")}}
+            <button id="telemetry_button">Publish</button> 
+        </form>
+
+    </div>
+
+    <div class="monitor">monitor
+        
+    </div>
+
+    <div class="replies">
+        <ul id="mqttReplies"> 
+             
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block js %} 
+<script>
+var connected_flag=0	
+var mqtt;
+var reconnectTimeout = 2000;
+var host = "176.58.103.182"; // "176.58.103.182"      "45.33.122.253"
+var port = 9001;
+</script>
+
+{% endblock%}

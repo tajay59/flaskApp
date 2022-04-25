@@ -3,9 +3,28 @@
           box-sizing: border-box;
 }
 
+li.dashboard > a {
+  font-weight: bold;
+  border-radius: 5px;
+  border-bottom: 5px solid lightblue;
+  color: #fff4e6;
+}
+
 main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.mapcontainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
 }
 
 .wrapper {
@@ -28,7 +47,7 @@ main {
   grid-row-end: 2;
 }
 
-.wrapper > div {
+.wrapper > div, .mapcontainer > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
